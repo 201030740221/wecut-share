@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    ajaxData(1);
+    ajaxData();
 })
 var myScroll,
     pullUpEl, pullUpOffset,
@@ -12,8 +12,7 @@ function ajaxData(current_page) {
         data: {
             id:2,
             type:2,
-            page: current_page,
-            count: 10
+            page: current_page
         },
         url: 'http://hd.wecut.com/api/starlive/list.php',
         success: function(res){
@@ -29,6 +28,7 @@ function ajaxData(current_page) {
     });
 }
 
+/*
 
 function pullUpAction () {
 
@@ -81,4 +81,4 @@ function loaded() {
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);*/
