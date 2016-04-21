@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-title" content="">
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>欧巴来看我直播</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <div id="scroller">
+        <div class="dec_section p_r">
+            <div class="activity_banner">
+                <img class="banner_img" src="images/logo_review.png" alt=""/>
+            </div>
+            <div class="dec_data">
+                <p class="dec_data_title"></p>
+                <p class="dec_data_title">已和 <span class="dec_title"> </span>个人视频聊天</p>
+            </div>
+            <div class="activity_content first_content">
+                <p class="activity_dec">
+                    - 点击底部下载 WECUT
+                </p>
+                <p class="activity_dec">
+                    - 打开WECUT，点击“我的欧巴最会撩”封面
+                </p>
+                <p class="activity_dec">
+                    即可拍出和 <span class="star_name"></span>    的视频聊天啦!
+                </p>
+            </div>
+        </div>
+        <div class="mb-20">
+            <div class="nav_section">
+                <div class="fl nav_li">
+                    <div class="nav_title">最新</div>
+                </div>
+
+                <div class="fr nav_li">
+                    <div class="nav_title active">最热</div>
+                </div>
+            </div>
+        </div>
+
+        <ul id="thelist">
+
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to refresh...</span>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <p class="footer_p"><i class="footer_i"></i><span class="footer_dec">点击下载WECUT，和视频聊天</span></p>
+</div>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/iscoll.js"></script>
+<script type="text/javascript" src="js/share.js" charset="utf-8"></script>
+
+</body>
+</html>
