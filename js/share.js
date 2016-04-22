@@ -13,6 +13,7 @@ $(document).ready(function(){
             $(this).addClass('active');
             $('.host_nav').removeClass('active');
             var type = 1;
+            $('#thelist').empty();
             ajaxData(type);
         }
     });
@@ -23,6 +24,7 @@ $(document).ready(function(){
             $(this).addClass('active');
             $('.new_nav').removeClass('active');
             var type_val = 2;
+            $('#thelist').empty();
             ajaxData(type_val);
         }
     });
