@@ -5,11 +5,11 @@ $(document).ready(function(){
     var _type = 2;
     ajaxData(_type);
 
-    var _scroll_top = 0;
+  /*  var _scroll_top = 0;
     $('#wrapper').scroll(function(){
         _scroll_top = $(this).scrollTop();
         console.log(_scroll_top);
-    })
+    })*/
 
     /*tab 切换*/
     $('.new_nav').click(function(){
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
         }else{
 
-            $("#wrapper").animate({scrollTop:_scroll_top},1000);
+            /*$("#wrapper").scrollTop({scrollTop:_scroll_top},1000);*/
 
             $(this).addClass('active');
             $('.host_nav').removeClass('active');
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
         }else{
 
-            $("#wrapper").animate({scrollTop:_scroll_top},1000);
+            /*$("#wrapper").animate({scrollTop:_scroll_top},1000);*/
 
             $(this).addClass('active');
             $('.new_nav').removeClass('active');
