@@ -202,6 +202,23 @@ function ajaxData(type) {
             })
             $('#thelist').append(_video_list);
 
+            /*兼容安卓部分机型不能播放*/
+            $('.play_btn').click(function(){
+
+                var _this = this;
+                var _video = $(this).siblings('video');
+                _video[0].play();
+                $(this).hide();
+
+                _video[0].addEventListener("click",function(){
+
+                    console.log(99);
+                });
+                _video[0].addEventListener("ended",function(){
+                    $(_this).show();
+                });
+            })
+
         }
     });
 }

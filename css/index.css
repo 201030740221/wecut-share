@@ -290,6 +290,16 @@ body :-ms-input-placeholder {
     position: relative;
     margin-top: 20px;
 }
+.play_btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    width: 66px;
+    height: 66px;
+    margin-top: -33px;
+    margin-left: -33px;
+}
 
 .activity_banner{
     width: 100%;
