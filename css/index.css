@@ -210,7 +210,8 @@ body :-ms-input-placeholder {
     padding:0;
     margin:0;
     width:100%;
-    text-align:left;
+    text-align:center;
+    padding: 20px;
 }
 
 #scroller li {
