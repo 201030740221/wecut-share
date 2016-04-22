@@ -5,22 +5,35 @@ $(document).ready(function(){
     var _type = 2;
     ajaxData(_type);
 
+    var _scroll_top = 0;
+    $('#wrapper').scroll(function(){
+        _scroll_top = $(this).scrollTop();
+        console.log(_scroll_top);
+    })
+
     /*tab 切换*/
     $('.new_nav').click(function(){
         if($(this).hasClass('active')){
 
         }else{
+
+            $("#wrapper").animate({scrollTop:_scroll_top},1000);
+
             $(this).addClass('active');
             $('.host_nav').removeClass('active');
             var type = 1;
             $('#thelist').empty();
             ajaxData(type);
+
         }
     });
     $('.host_nav').click(function(){
         if($(this).hasClass('active')){
 
         }else{
+
+            $("#wrapper").animate({scrollTop:_scroll_top},1000);
+
             $(this).addClass('active');
             $('.new_nav').removeClass('active');
             var type_val = 2;
@@ -82,7 +95,7 @@ function wechatConfig(configData){
             }
         });
 
-        var name = $('.dec_star_name').text();
+        var name = $('.share_star_name').val();
         var title='老公#' + name + '# 邀请你视频通话…赶紧接起来呀！',
             link = window.location.href,
             image = $('.share_img').val(),
@@ -180,6 +193,7 @@ function ajaxData(type) {
             $('.dec_star_name').text(star.name);
             $('.dec_count').text(star.copynum);
             $('.share_img').val(star.uavatar);
+            $('.share_star_name').val(star.name);
 
             var _video = res.data.video;
             var _video_list = '';
