@@ -46,10 +46,9 @@ $(document).ready(function(){
     getWechatConfig();
 
     /*底部下载*/
+    var _ua = navigator.userAgent;
     $('#footer').click(function(){
-        var _ua = suitUa();
-        console.log(_ua[0]);
-        if(_ua[0]=='Weibo'){
+        if(_ua.indexOf('Weibo')>=0){
             window.location.href = 'http://t.cn/RGqa1jS';
         }else{
             window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.hithway.wecut';
@@ -146,7 +145,7 @@ function GetRequest() {
     return theRequest;
 }
 
-var ua = [
+/*var ua = [
     ["LBBROWSER", "猎豹浏览器"],
     ["Maxthon", "遨游浏览器"],
     ["Firefox", "火狐浏览器"],
@@ -160,7 +159,7 @@ var ua = [
 ];
 
 function suitUa(){ //判断浏览器
-    var _ua = navigator.userAgent;
+    //var _ua = navigator.userAgent;
     var ual = ua.length;
     for(var i = 0 ; i < ual; i++){
         if(new RegExp(ua[i][0]).test(_ua)){
@@ -168,7 +167,7 @@ function suitUa(){ //判断浏览器
         }
     }
     return ["unkown", "未知浏览器"];
-}
+}*/
 
 var myScroll,
     pullUpEl, pullUpOffset,
