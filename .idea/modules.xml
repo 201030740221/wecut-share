@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/h5-share.iml" filepath="$PROJECT_DIR$/.idea/h5-share.iml" />
+      <module fileurl="file://$USER_HOME$/count-show/.idea/count-show.iml" filepath="$USER_HOME$/count-show/.idea/count-show.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/h5-gaobai-page.iml" filepath="$PROJECT_DIR$/.idea/h5-gaobai-page.iml" />
     </modules>
   </component>
 </project>
