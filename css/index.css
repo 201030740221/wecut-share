@@ -217,7 +217,8 @@ body :-ms-input-placeholder {
     width: 176px;
     margin: 15px auto 0;
     height: 40px;
-    background: url(../images/outer.png) no-repeat;
+    background-image: url(../images/limit.png);
+    background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }

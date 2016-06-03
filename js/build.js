@@ -4,6 +4,10 @@ $(document).ready(function(){
     $('#input_section').width(_w);
     $('#input_section').height(_h);*/
 
+    $('#input_section').keydown(function(){
+        console.log(33);
+        $('.outer_section').css('background-image','url(images/outer.png)');
+    });
 
     $('.outer_section').click(function(){
         var _val = $('#input_section').val();
@@ -12,6 +16,7 @@ $(document).ready(function(){
             return;
         }
         if($(this).hasClass('has_publish')){
+            return;
 
         }else{
             publish();
@@ -28,10 +33,12 @@ $(document).ready(function(){
 });
 
 function publish(){
-    /*var _id_data = GetRequest();
-    var _uid = _id_data['uid'];*/
+
+    var timestamp = Date.parse(new Date());
+    console.log(timestamp);
     var parmas = {
-        content: $('#input_section').val()
+        content: $('#input_section').val(),
+        timestamp: timestamp
     };
 
     $.ajax({
@@ -41,23 +48,13 @@ function publish(){
         url: 'http://hd.wecut.com/api/shudong/publish.php',
         success: function(_res){
 
-            $('.outer_section').addClass('has_publish');
+            if(_res.code==1){
+                $('.outer_section').addClass('has_publish');
+                $('.outer_section').css('background-image','url(images/success.png)');
+            }
+
+
         }
     })
 
-}
-
-function GetRequest() {
-    var url = window.location.href; //获取url中"?"符后的字串
-    //var url = 'http://hd.wecut.com/pageview/constell/index.html#/?issupport=1&uid=34MjENDk=';
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-        var ind = url.indexOf("?");
-        var str = url.substr(ind+1);
-        var strs = str.split("&");
-        for(var i = 0; i < strs.length; i ++) {
-            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-        }
-    }
-    return theRequest;
 }
